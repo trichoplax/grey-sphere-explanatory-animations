@@ -1,1 +1,17 @@
-PLACEHOLDER TEXT
+<!DOCTYPE html>
+<html>
+    <head><meta content="text/html;charset=utf8" http-equiv="Content-Type" /></head>
+    <body>
+                
+        <script type="module">
+            import init, { data_url } from "./beachball.js";
+            async function run() {
+                await init();
+                let image = document.createElement("img");
+                image.src = data_url();
+                document.body.appendChild(image);
+            }
+            run();
+        </script>
+    </body>
+</html>
